@@ -13,23 +13,46 @@ namespace myClass.Model
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+
+        [Display(Name = "Tên loại hàng")]
+        [Required] 
         public string Name { get; set; }
+
+        [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
+
+        [Display(Name = "Cấp cha")]
         public int? Parentld { get; set; }
+
+        [Display(Name = "Sắp xếp")]
         public int? Order { get; set; }
         [Required]
+        [Display(Name = "Mô tả")]
         public string MetaDess {  get; set; }
+
         [Required]
+        [Display(Name = "Từ khóa")]
         public string MetaKey { get; set; }
+
+        [Required]
+        [Display(Name = "Người tạo")]
         public int CreatedBy {  get; set; }
-     
+
+        [Required]
+        [Display(Name = "Ngày tạo")]
         public DateTime CreatedAt { get; set; }
+
+        [Required]
+        [Display(Name = "Người cập nhập")]
         public int UpdateBy {  get; set; }
 
+        [Required]
+        [Display(Name = "Ngày cập  nhập")]
         public DateTime UpdatedAt { get; set;}
+        [Required]
+        [Display(Name = "Trạng Thái")]
         public int Status {  get; set; }
 
-
+       
     }
 }

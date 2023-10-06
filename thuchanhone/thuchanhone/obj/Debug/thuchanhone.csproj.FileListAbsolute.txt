@@ -78,9 +78,7 @@ D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\obj\Debug\thuchanhone.c
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\obj\Debug\thuchanhone.dll
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\obj\Debug\thuchanhone.pdb
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\EntityFramework.dll
-D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\EntityFramework.SqlServer.dll
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\MyClass.dll
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\MyClass.pdb
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\MyClass.dll.config
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\EntityFramework.xml
-D:\phattrienungdungwed\PTUDW-TQH\thuchanhone\thuchanhone\bin\EntityFramework.SqlServer.xml
