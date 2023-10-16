@@ -13,9 +13,9 @@ namespace myClass.Model
     {
         [Key]
         public int Id { get; set; }
-
+        [Required(ErrorMessage ="Tên loại sản phẩm không để trống")]
         [Display(Name = "Tên loại hàng")]
-        [Required] 
+      
         public string Name { get; set; }
 
         [Display(Name = "Tên rút gọn")]
@@ -46,8 +46,9 @@ namespace myClass.Model
         [Display(Name = "Người cập nhập")]
         public int UpdateBy {  get; set; }
 
-        [Required]
+       
         [Display(Name = "Ngày cập  nhập")]
+        [Required(ErrorMessage ="Ngày cập nhập không để trống")]
         public DateTime UpdatedAt { get; set;}
         [Required]
         [Display(Name = "Trạng Thái")]
