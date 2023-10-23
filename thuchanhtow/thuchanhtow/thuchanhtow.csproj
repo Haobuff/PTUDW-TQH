@@ -323,6 +323,8 @@
     <Content Include="public\img\r8.jpg" />
     <Content Include="public\img\r9.jpg" />
     <Content Include="public\index.html" />
+    <Content Include="public\jquery.dataTables.min.css" />
+    <Content Include="public\js\jquery.dataTables.min.js" />
     <Content Include="public\js\main.js" />
     <Content Include="public\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
     <Content Include="public\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
@@ -2653,6 +2655,7 @@
     <Content Include="Areas\admin\Views\Category\Edit.cshtml" />
     <Content Include="Areas\admin\Views\Category\Index.cshtml" />
     <Content Include="Areas\admin\Views\Shared\Message.cshtml" />
+    <Content Include="Areas\admin\Views\Category\Trash.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
