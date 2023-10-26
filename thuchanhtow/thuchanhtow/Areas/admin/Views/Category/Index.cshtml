@@ -10,7 +10,7 @@
 }
 @section footer{
     <script src="~/public/js/jquery.dataTables.min.js"></script>
-<script>let table = new DataTable('#myTable');</script>
+    <script>let table = new DataTable('#myTable');</script>
 }
 
 <div class="wrapper">
@@ -36,8 +36,7 @@
                 </div>
                 <div class="card-body">
                     @Html.Partial("Message")
-
-                    <table id="table table_id" class="display">
+                    <table class="table table-bordered table-striped" id="myTable">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -50,7 +49,6 @@
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
-
                             {
                                 <tr>
                                     <td>@Html.DisplayFor(modelItem => item.Id)</td>

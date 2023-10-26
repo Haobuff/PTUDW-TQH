@@ -24,14 +24,13 @@
                             </div>
 
                             <div class="col-md-6 text-right">
-                                <a href="@Url.Action("Index", "Category")" class="btn-sm btn-info"><i class="fa fa-long-arrow-alt-left"></i> Quay lại</a>
+                                <a href="@Url.Action("Index","Category")" class="btn-sm btn-info"><i class="fa fa-long-arrow-alt-left"></i> Quay lại</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
                         @Html.Partial("Message")
-
-                        <table id="table table-">
+                        <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -39,14 +38,12 @@
                                     <th>@Html.DisplayNameFor(model => model.Slug)</th>
                                     <th>@Html.DisplayNameFor(model => model.Parentld)</th>
                                     <th>@Html.DisplayNameFor(model => model.Order)</th>
-                                    <td>@Html.DisplayFor(model => model.MetaDess)</td>
-                                    <td>@Html.DisplayFor(model => model.MetaKey)</td>
+                                    <th>@Html.DisplayNameFor(model => model.MetaDess)</th>
+                                    <th>@Html.DisplayNameFor(model => model.MetaKey)</th>
                                     <th>Xác nhận</th>
-
                                 </tr>
                             </thead>
                             <tbody>
-
                                 <tr>
                                     <td>@Html.DisplayFor(model => model.Id)</td>
                                     <td>@Html.DisplayFor(model => model.Name)</td>
@@ -57,13 +54,10 @@
                                     <td>@Html.DisplayFor(model => model.MetaKey)</td>
                                     <td>
                                         <div class="form-actions no-color">
-                                            <button class="btn-sm btn-default"input type="submit" name="Delete" > xóa [Del] <i class="fa fa-trash"></i></button>
-
+                                            <button class="btn-sm btn-danger" input type="submit" name="Delete"> Xóa [Del] <i class="fa fa-trash"></i></button>
                                         </div>
                                     </td>
-
                                 </tr>
-
                             </tbody>
                         </table>
 
@@ -73,4 +67,4 @@
         </div> <!-- /.content-wrapper -->
     </div><!-- ./wrapper -->
 }
-  
+

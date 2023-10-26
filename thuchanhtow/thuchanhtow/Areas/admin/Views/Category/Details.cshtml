@@ -17,19 +17,18 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-6">
-                            <strong class="text-danger">Thông tin chi tiết lạo sản phẩm</strong>
+                            <strong class="text-danger">THÔNG TIN CHI TIẾT LOẠI SẢN PHẨM</strong>
                         </div>
 
                         <div class="col-md-6 text-right">
-                            <a href="@Url.Action("Create","Category",  new { id = Model.Id }))" class="btn-sm btn-success"><i class="fa fa-plus"></i> edit</a>
-                            <a href="@Url.Action("Index", "Category")" class="btn-sm btn-primary"><i class="fa fa-long-arrow-alt-left"></i> Quay lại</a>
+                            <a href="@Url.Action("Edit","Category", new { id = Model.Id })" class="btn-sm btn-success"><i class="fa fa-plus"></i> Sửa</a>
+                            <a href="@Url.Action("Index","Category")" class="btn-sm btn-info"><i class="fa fa-long-arrow-alt-left"></i> Quay lại</a>
                         </div>
                     </div>
                 </div>
                 <div class="card-body">
                     @Html.Partial("Message")
-
-                    <table id="table table-">
+                    <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -37,13 +36,11 @@
                                 <th>@Html.DisplayNameFor(model => model.Slug)</th>
                                 <th>@Html.DisplayNameFor(model => model.Parentld)</th>
                                 <th>@Html.DisplayNameFor(model => model.Order)</th>
-                                <td>@Html.DisplayFor(model => model.MetaDess)</td>
-                                <td>@Html.DisplayFor(model => model.MetaKey)</td>
-
+                                <th>@Html.DisplayNameFor(model => model.MetaDess)</th>
+                                <th>@Html.DisplayNameFor(model => model.MetaKey)</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
                             <tr>
                                 <td>@Html.DisplayFor(model => model.Id)</td>
                                 <td>@Html.DisplayFor(model => model.Name)</td>
@@ -52,9 +49,7 @@
                                 <td>@Html.DisplayFor(model => model.Order)</td>
                                 <td>@Html.DisplayFor(model => model.MetaDess)</td>
                                 <td>@Html.DisplayFor(model => model.MetaKey)</td>
-
                             </tr>
-                            
                         </tbody>
                     </table>
 
@@ -63,99 +58,3 @@
         </section><!-- /.content -->
     </div> <!-- /.content-wrapper -->
 </div><!-- ./wrapper -->
-
-<div>
-    <h4>Categories</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Slug)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Slug)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Parentld)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Parentld)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Order)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Order)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MetaDess)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MetaDess)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MetaKey)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MetaKey)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedBy)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedAt)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdateBy)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdateBy)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UpdatedAt)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-
-    </dl>
-</div>
-
