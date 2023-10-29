@@ -60,6 +60,7 @@
     <Compile Include="Model\Products.cs" />
     <Compile Include="Model\Sliders.cs" />
     <Compile Include="Model\Suppliers.cs" />
+    <Compile Include="Dao\SuppliersDAO.cs" />
     <Compile Include="Model\Topics.cs" />
     <Compile Include="Model\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

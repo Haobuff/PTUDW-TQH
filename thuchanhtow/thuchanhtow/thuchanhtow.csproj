@@ -130,6 +130,7 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\admin\Controllers\SupplierController.cs" />
     <Compile Include="Controllers\siteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2656,6 +2657,11 @@
     <Content Include="Areas\admin\Views\Category\Index.cshtml" />
     <Content Include="Areas\admin\Views\Shared\Message.cshtml" />
     <Content Include="Areas\admin\Views\Category\Trash.cshtml" />
+    <Content Include="Areas\admin\Views\Supplier\Create.cshtml" />
+    <Content Include="Areas\admin\Views\Supplier\Delete.cshtml" />
+    <Content Include="Areas\admin\Views\Supplier\Details.cshtml" />
+    <Content Include="Areas\admin\Views\Supplier\Edit.cshtml" />
+    <Content Include="Areas\admin\Views\Supplier\Index.cshtml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -2689,6 +2695,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
     <Folder Include="Models\" />
+    <Folder Include="public\img\supplier\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
