@@ -324,8 +324,7 @@
     <Content Include="public\img\r7.jpg" />
     <Content Include="public\img\r8.jpg" />
     <Content Include="public\img\r9.jpg" />
-    <Content Include="public\index.html" />
-    <Content Include="public\jquery.dataTables.min.css" />
+    <Content Include="public\css\jquery.dataTables.min.css" />
     <Content Include="public\js\jquery.dataTables.min.js" />
     <Content Include="public\js\main.js" />
     <Content Include="public\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
@@ -2695,9 +2694,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\site\_Layoutsite.cshtml" />
     <Content Include="Views\site\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

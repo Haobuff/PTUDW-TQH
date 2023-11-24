@@ -4,7 +4,6 @@
     ViewBag.Title = "Xác nhận xoa mẩu tin";
     Layout = "~/Areas/admin/Views/Shared/_Layoutadmin.cshtml";
 }
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -47,13 +46,13 @@
                             <tbody>
                                 <tr>
                                     <td><input type="checkbox" name="id" value="" /></td>
-                                    <th>@Html.DisplayNameFor(model => model.Id)</th>
-                                    <th>@Html.DisplayNameFor(model => model.CatID)</th>
-                                    <th>@Html.DisplayNameFor(model => model.Name)</th>
-                                    <th>@Html.DisplayNameFor(model => model.SupplierId)</th>
-                                    <th>@Html.DisplayNameFor(model => model.Price)</th>
-                                    <th>@Html.DisplayNameFor(model => model.Qty)</th>
-                                    <td><img src="~/public/img/product/@Model.Image" alt="Image" class="img-fluid" /></td>
+                                    <td>@Html.DisplayFor(model => model.Id)</td>
+                                    <td>@Html.DisplayFor(model => model.CatID)</td>
+                                    <td>@Html.DisplayFor(model => model.Name)</td>
+                                    <td>@Html.DisplayFor(model => model.SupplierId)</td>
+                                    <td>@Html.DisplayFor(model => model.Price)</td>
+                                    <td>@Html.DisplayFor(model => model.Qty)</td>
+                                    <td><img src="~/Public/img/product/@Model.Image" alt="Img" class="img-fluid" /></td>
                                     <td>
                                         <div class="form-actions no-color">
                                             <button class="btn-sm btn-danger" input type="submit" name="Delete"> Xóa [Del] <i class="fa fa-trash"></i></button>

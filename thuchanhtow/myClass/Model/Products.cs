@@ -24,7 +24,7 @@ namespace myClass.Model
 
         [Required(ErrorMessage = "Mã nhà cung cấp không để trống")]
         [Display(Name = "Mã nhà cung cấp")]
-        public string SupplierId { get; set; }
+        public int SupplierId { get; set; }
 
         [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
@@ -47,11 +47,11 @@ namespace myClass.Model
 
         [Required(ErrorMessage = "Mô tả không để trống")]
         [Display(Name = "Mô tả")]
-        public int MetaDesc { get; set; }
+        public string MetaDesc { get; set; }
 
         [Required(ErrorMessage = "Từ khóa không để trống")]
         [Display(Name = "Từ khóa")]
-        public int MetaKey { get; set; }
+        public string MetaKey { get; set; }
 
         [Required(ErrorMessage = "Người tạo không để trống")]
         [Display(Name = "Người tạo")]
