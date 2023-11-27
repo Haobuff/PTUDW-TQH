@@ -12,6 +12,7 @@ namespace thuchanhtow.Controllers
     public class siteController : Controller
     {
         // GET: site
+
         public ActionResult Index()
         {
             MyDBContext db = new MyDBContext();//tạo mới mẫu tin
@@ -19,6 +20,8 @@ namespace thuchanhtow.Controllers
             ViewBag.somau = somau;//truyền dưới dạng ViewBag
             return View();
         }
-        
+
+
+
     }
 }

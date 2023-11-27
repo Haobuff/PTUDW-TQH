@@ -1,10 +1,11 @@
-﻿using System;
+﻿using myClass.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using myClass.Model;
+
 
 namespace myClass.Dao
 {
@@ -19,8 +20,8 @@ namespace myClass.Dao
             return db.Products.ToList();
         }
 
-        //Index chi voi staus 1,2        
-        public List<Products> getList(string status = "ALL")//status 0,1,2
+        //SELECT * from cho Index chi voi status 1,2
+        public List<Products> getList(string status = "ALL")//status = 0,1,2
         {
             List<Products> list = null;
             switch (status)
@@ -56,7 +57,7 @@ namespace myClass.Dao
             }
         }
 
-        //tao moi mau tin
+        //tao moi 
         public int Insert(Products row)
         {
             db.Products.Add(row);
@@ -70,11 +71,11 @@ namespace myClass.Dao
             return db.SaveChanges();
         }
 
-        //Xoa mau tin
+        //xoa mau tin
         public int Delete(Products row)
         {
             db.Products.Remove(row);
-            return db.SaveChanges();//thanh cong => return 1
+            return db.SaveChanges();
         }
     }
 }

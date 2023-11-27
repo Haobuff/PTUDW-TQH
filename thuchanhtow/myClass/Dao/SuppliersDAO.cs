@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using myClass.Model;
 
-namespace myClass.Model
+namespace myClass.Dao
 {
     public class SuppliersDAO
     {
-        //copy nội dung class thay the Categories thanhf Suppliers
+        //Copy noi dung cua class CATEGORIES, thay the Categories bang Suppliers
         private MyDBContext db = new MyDBContext();
 
         //SELECT * FROM ...
@@ -19,8 +19,8 @@ namespace myClass.Model
             return db.Suppliers.ToList();
         }
 
-        //Index chi voi staus 1,2        
-        public List<Suppliers> getList(string status = "ALL")//status 0,1,2
+        //SELECT * from cho Index chi voi status 1,2
+        public List<Suppliers> getList(string status = "ALL")//status = 0,1,2
         {
             List<Suppliers> list = null;
             switch (status)
@@ -56,7 +56,7 @@ namespace myClass.Model
             }
         }
 
-        //tao moi mau tin
+        //tao moi 
         public int Insert(Suppliers row)
         {
             db.Suppliers.Add(row);
@@ -70,7 +70,7 @@ namespace myClass.Model
             return db.SaveChanges();
         }
 
-        //Xoa mau tin
+        //xoa mau tin
         public int Delete(Suppliers row)
         {
             db.Suppliers.Remove(row);
@@ -78,4 +78,3 @@ namespace myClass.Model
         }
     }
 }
-

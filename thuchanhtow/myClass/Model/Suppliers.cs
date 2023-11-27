@@ -13,6 +13,7 @@ namespace myClass.Model
     {
         [Key]
         public int Id { get; set; }
+
         [Required(ErrorMessage = "Tên nhà cung cấp không để trống")]
         [Display(Name = "Tên nhà cung cấp")]
         public string Name { get; set; }
@@ -59,6 +60,6 @@ namespace myClass.Model
         public DateTime UpdateAt { get; set; }
 
         [Display(Name = "Trạng thái")]
-        public int Status { get; set; }// neu sql là allow null thi int?
+        public int? Status { get; set; }
     }
 }

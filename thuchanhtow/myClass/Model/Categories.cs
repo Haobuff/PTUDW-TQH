@@ -23,7 +23,7 @@ namespace myClass.Model
         public string Slug { get; set; }
 
         [Display(Name = "Cấp cha")]
-        public int? Parentld { get; set; }
+        public int? ParentId { get; set; }
 
         [Display(Name = "Sắp xếp")]
         public int? Order { get; set; }

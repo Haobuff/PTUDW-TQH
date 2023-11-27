@@ -101,10 +101,10 @@
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.CatID, htmlAttributes: new { @class = "control-label col-md-12" })
+                                    @Html.LabelFor(model => model.CatId, htmlAttributes: new { @class = "control-label col-md-12" })
                                     <div class="col-md-10">
-                                        @Html.DropDownListFor(model => model.CatID, (SelectList)@ViewBag.ListCatID, "Loại hàng", new { @class = "form-control" })
-                                        @Html.ValidationMessageFor(model => model.CatID, "", new { @class = "text-danger" })
+                                        @Html.DropDownListFor(model => model.CatId, (SelectList)@ViewBag.ListCatID, "Loại hàng", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.CatId, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 

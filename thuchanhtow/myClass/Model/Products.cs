@@ -16,22 +16,21 @@ namespace myClass.Model
 
         [Required(ErrorMessage = "Mã loại SP không để trống")]
         [Display(Name = "Mã loại SP")]
-        public int CatID { get; set; }
+        public int CatId { get; set; }
 
-        [Required(ErrorMessage = "Tên sản phẩm không để trống")]
+        [Required(ErrorMessage = "Tên sản phẩm cấp không để trống")]
         [Display(Name = "Tên sản phẩm")]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Mã nhà cung cấp không để trống")]
         [Display(Name = "Mã nhà cung cấp")]
-        public int SupplierId { get; set; }
+        public string SupplierId { get; set; }
 
         [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
- 
 
         [Display(Name = "Hình ảnh")]
-        public string Image { get; set; }
+        public string Img { get; set; }
 
         [Required(ErrorMessage = "Giá nhập không để trống")]
         [Display(Name = "Giá nhập")]
@@ -69,11 +68,9 @@ namespace myClass.Model
         [Display(Name = "Ngày cập nhật")]
         public DateTime UpdateAt { get; set; }
 
-        [Required(ErrorMessage = "Trạng thái")]
+        
         [Display(Name = "Trạng thái")]
         public int? Status { get; set; }
-
     }
-
 }
 

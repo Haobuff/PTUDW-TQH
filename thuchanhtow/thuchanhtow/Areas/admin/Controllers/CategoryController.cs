@@ -66,9 +66,9 @@ namespace thuchanhtow.Areas.Admin.Controllers
                 //Xu ly tu dong: UpdateAt
                 categories.UpdatedAt = DateTime.Now;
                 //Xu ly tu dong: ParentId
-                if (categories.Parentld == null)
+                if (categories.ParentId == null)
                 {
-                    categories.Parentld = 0;
+                    categories.ParentId = 0;
                 }
                 //Xu ly tu dong: Order
                 if (categories.Order == null)
@@ -126,9 +126,9 @@ namespace thuchanhtow.Areas.Admin.Controllers
                 //xu ly tu dong: Slug
                 categories.Slug = XString.Str_Slug(categories.Name);
                 //xu ly tu dong: ParentID
-                if (categories.Parentld == null)
+                if (categories.ParentId == null)
                 {
-                    categories.Parentld = 0;
+                    categories.ParentId = 0;
                 }
                 //xu ly tu dong: Order
                 if (categories.Order == null)
