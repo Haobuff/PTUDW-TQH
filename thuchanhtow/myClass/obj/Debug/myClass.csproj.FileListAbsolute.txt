@@ -10,3 +10,7 @@ D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\obj\Debug\myClass.csproj.Co
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\obj\Debug\myClass.csproj.CopyComplete
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\obj\Debug\myClass.dll
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\obj\Debug\myClass.pdb
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\bin\Debug\PagedList.dll
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\bin\Debug\PagedList.Mvc.dll
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\bin\Debug\PagedList.xml
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\myClass\bin\Debug\PagedList.Mvc.xml

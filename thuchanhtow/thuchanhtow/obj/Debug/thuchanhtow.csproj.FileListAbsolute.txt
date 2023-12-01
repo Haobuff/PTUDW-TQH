@@ -84,3 +84,8 @@ D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\myClass.pdb
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\myClass.dll.config
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\EntityFramework.xml
 D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\EntityFramework.SqlServer.xml
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\System.Numerics.Vectors.dll
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\PagedList.dll
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\PagedList.Mvc.dll
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\PagedList.xml
+D:\phattrienungdungwed\PTUDW-TQH\thuchanhtow\thuchanhtow\bin\PagedList.Mvc.xml

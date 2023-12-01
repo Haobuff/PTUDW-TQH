@@ -1,0 +1,6 @@
+﻿@model IEnumerable<myClass.Model.Suppliers>
+@foreach (var item in Model)
+{
+    <li><a href="@Url.Action("ListByBrand", "site", new {id = item.Id })">@item.Name</a></li>
+}
+

@@ -33,7 +33,7 @@
 
                 @*Loai hang*@
                 <li class="nav-item submenu dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="@Url.Action("ListByBrand", "site")" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">NHÀ CUNG CẤP</a>
                     <ul class="dropdown-menu">
                         @foreach (var item in Model)
@@ -45,11 +45,11 @@
                         }
                     </ul>
                 </li>
-
+              
                 @*san pham*@
                 <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">NHÀ CUNG CẤP</a>
+                       aria-expanded="false">SẢN PHẨM</a>
                     <ul class="dropdown-menu">
                         @foreach (var item in Model)
                         {

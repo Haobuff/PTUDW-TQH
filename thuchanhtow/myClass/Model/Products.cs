@@ -24,7 +24,7 @@ namespace myClass.Model
 
         [Required(ErrorMessage = "Mã nhà cung cấp không để trống")]
         [Display(Name = "Mã nhà cung cấp")]
-        public string SupplierId { get; set; }
+        public int SupplierId { get; set; }
 
         [Display(Name = "Tên rút gọn")]
         public string Slug { get; set; }
