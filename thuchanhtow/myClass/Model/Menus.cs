@@ -40,7 +40,7 @@ namespace myClass.Model
         [Required(ErrorMessage = "Người tạo không để trống")]
         public DateTime CreateAt { get; set; }
 
-        [Display(Name = "Người tạo")]
+        [Display(Name = "ngày tạo")]
         [Required(ErrorMessage = "Người tạo không để trống")]
         public int CreateBy { get; set; }
 
