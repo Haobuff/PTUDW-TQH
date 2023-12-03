@@ -4,39 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using thuchanhtow.Models;
 
 namespace thuchanhtow.Controllers
 {
     public class CartController : Controller
     {
-        private MyDBContext db = new MyDBContext();
-        private int id;
-        private int iSoLuong;
-        private int dThanhTien;
+         MyDBContext db = new MyDBContext();
 
-        public CartController(int id)
-        {
-        }
 
-        // GET: Cart
-        public List<CartController> TakeACart()
+        public List<Cart> TakeACart()
         {
-            List<CartController> lstCart = Session["Cart"] as List<CartController>;
+            List<Cart> lstCart = Session["Cart"] as List<Cart>;
             if (lstCart == null)
             {
-                lstCart = new List<CartController>();
+                lstCart = new List<Cart>();
                 Session["Cart"] = lstCart;
             }
             return lstCart;
         }
 
-        public ActionResult AddToCart(int id, string strUrl)
+        public ActionResult AddToCart(int iMaSP, string strUrl)
         {
-            List<CartController> lstCart = TakeACart();
-            CartController product = lstCart.Find(n => n.id == id);
+            List<Cart> lstCart = TakeACart();
+            Cart product = lstCart.Find(n => n.iMaSP == iMaSP);
             if (product == null)
             {
-                product = new CartController(id);
+                product = new Cart(iMaSP);
                 lstCart.Add(product);
                 return Redirect(strUrl);
             }
@@ -50,7 +44,7 @@ namespace thuchanhtow.Controllers
         private int TotalQuantity()
         {
             int iTotalQuantity = 0;
-            List<CartController> lstCart = Session["Cart"] as List<CartController>;
+            List<Cart> lstCart = Session["Cart"] as List<Cart>;
             if (lstCart != null)
             {
                 iTotalQuantity = lstCart.Sum(n => n.iSoLuong);
@@ -60,7 +54,7 @@ namespace thuchanhtow.Controllers
         private double TotalAmount()
         {
             double iTotalAmount = 0;
-            List<CartController> lstCart = Session["Cart"] as List<CartController>;
+            List<Cart> lstCart = Session["Cart"] as List<Cart>;
             if (lstCart != null)
             {
                 iTotalAmount = lstCart.Sum(n => n.dThanhTien);
@@ -69,7 +63,7 @@ namespace thuchanhtow.Controllers
         }
         public ActionResult Cart()
         {
-            List<CartController> lstCart = TakeACart();
+            List<Cart> lstCart = TakeACart();
             if (lstCart.Count == 0)
             {
                 return RedirectToAction("Index", "Cart");
@@ -88,20 +82,60 @@ namespace thuchanhtow.Controllers
             ViewBag.TotalAmount = TotalAmount();
             return PartialView();
         }
-        public ActionResult DeleteCart(int id)
+        public ActionResult DeleteCart(int iMaSP)
         {
-            List<CartController> lstCart = TakeACart();
-            CartController product = lstCart.SingleOrDefault(n => n.id == id);
+            List<Cart> lstCart = TakeACart();
+            Cart product = lstCart.SingleOrDefault(n => n.iMaSP == iMaSP);
             if (product != null)
             {
-                lstCart.RemoveAll(n => n.id == id);
+                lstCart.RemoveAll(n => n.iMaSP == iMaSP);
                 return RedirectToAction("Cart");
             }
             if (lstCart.Count == 0)
             {
-                return RedirectToAction("Index", "Home_63132535");
+                return RedirectToAction("Index", "site");
             }
             return RedirectToAction("Cart");
         }
+
+        public ActionResult UpdateCart(int iMaSP, FormCollection f)
+        {
+            List<Cart> lstCart = TakeACart();
+            Cart product = lstCart.SingleOrDefault(n => n.iMaSP == iMaSP);
+            if (product != null)
+            {
+                product.iSoLuong = int.Parse(f["txtSoLuong"].ToString());
+            }
+            return RedirectToAction("Cart");
+        }
+        public ActionResult DeleteAllCart()
+        {
+            List<Cart> lstCart = TakeACart();
+            lstCart.Clear();
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpGet]
+        public ActionResult Order()
+        {
+            if (Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+            {
+                return RedirectToAction("Register", "Member");
+            }
+            if (Session["Cart"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            // lấy giỏ hàng từ session
+            List<Cart> lstCart = TakeACart();
+            ViewBag.TotalQuantity = TotalQuantity();
+            ViewBag.TotalAmount = TotalAmount();
+            return View(lstCart);
+        }
+        
+        public ActionResult OrderSuccess()
+        {
+            return View();
+        }
+
     }
 }

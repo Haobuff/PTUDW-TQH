@@ -4,6 +4,8 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+        <a class="navbar-brand logo_shop" href="shop.html"><img src="~/public/img/logo.png" alt="Shop Logo" href="https://localhost:44393/"></a>
+    
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
@@ -12,15 +14,16 @@
         </button>
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                @*trang chu*@
+                <!-- Các mục thanh điều hướng khác ở đây -->
+                <!-- Trang chủ -->
                 <li class="nav-item active"><a class="nav-link" href="https://localhost:44393/">TRANG CHỦ</a></li>
 
-                @*shop*@
+                <!-- Loại hàng -->
                 <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">LOẠI HÀNG</a>
                     <ul class="dropdown-menu">
-
+                        <!-- Duyệt qua danh sách loại hàng và hiển thị mỗi loại -->
                         @foreach (var item in Model)
                         {
                             if (item.TypeMenu == "category")
@@ -31,11 +34,12 @@
                     </ul>
                 </li>
 
-                @*Loai hang*@
+                <!-- Nhà cung cấp -->
                 <li class="nav-item submenu dropdown">
                     <a href="@Url.Action("ListByBrand", "site")" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">NHÀ CUNG CẤP</a>
                     <ul class="dropdown-menu">
+                        <!-- Duyệt qua danh sách nhà cung cấp và hiển thị mỗi nhà cung cấp -->
                         @foreach (var item in Model)
                         {
                             if (item.TypeMenu == "supplier")
@@ -45,12 +49,13 @@
                         }
                     </ul>
                 </li>
-              
-                @*san pham*@
+
+                <!-- Sản phẩm -->
                 <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">SẢN PHẨM</a>
                     <ul class="dropdown-menu">
+                        <!-- Duyệt qua danh sách sản phẩm và hiển thị mỗi sản phẩm -->
                         @foreach (var item in Model)
                         {
                             if (item.TypeMenu == "product")
@@ -61,7 +66,7 @@
                     </ul>
                 </li>
 
-                @*tuy chọn*@
+                <!-- Tùy chọn -->
                 @foreach (var item in Model)
                 {
                     if (item.TypeMenu == "custom")
@@ -70,17 +75,17 @@
                     }
                 }
 
-
-                @*contact*@
+                <!-- Liên hệ -->
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-
             </ul>
 
+            <!-- Các nút và biểu tượng khác ở đây -->
             <ul class="nav-shop">
                 <li class="nav-item"><button><i class="ti-search"></i></button></li>
-                <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
+                <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button></li>
                 <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
             </ul>
         </div>
     </div>
 </nav>
+

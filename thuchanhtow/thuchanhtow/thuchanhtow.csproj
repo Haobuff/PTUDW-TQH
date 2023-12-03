@@ -153,6 +153,7 @@
     </Compile>
     <Compile Include="Libryli\XMessage.cs" />
     <Compile Include="Libryli\XString.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -2731,7 +2732,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Data\" />
-    <Folder Include="Models\" />
     <Folder Include="public\img\supplier\" />
     <Folder Include="Views\Cart\" />
   </ItemGroup>
