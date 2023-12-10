@@ -34,7 +34,7 @@
                 <p class="price"><span>@Model.SalePrice VNĐ</span></p>
                 <p>@Model.MetaDesc</p>
 
-                <p><a href="@Url.Action("AddToCart", "Cart_63132535", new { @iMaSP = Model.CatId, @strURL = Request.Url.ToString() })" class="btn btn-black py-3 px-5 mr-2">Thêm</a></p>
+                <p><a href="@Url.Action("AddToCart", "Cart", new { @iMaSP = Model.CatId, @strURL = Request.Url.ToString() })" class="btn btn-black py-3 px-5 mr-2">Thêm</a></p>
             </div>
         </div>
 
